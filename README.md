@@ -3,7 +3,7 @@
 Extended map operations for Elixir, providing additional utility functions for working with maps.
 
 > [!NOTE]
-> No tests. Use at your own discretion.
+> No tests. Code can be changed disregard backward compatibility. Use at your own discretion.
 
 ## Features
 
