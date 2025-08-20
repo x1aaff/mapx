@@ -15,7 +15,9 @@ Extended map operations for Elixir, providing additional utility functions for w
 
 ## Installation
 
-Add to your `mix.exs`:
+You can copy any code you need
+
+Or add to your `mix.exs`:
 ```elixir
 def deps do
   [
