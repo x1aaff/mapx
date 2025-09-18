@@ -1,7 +1,7 @@
 defmodule Mapx.MixProject do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.2.0"
   @source "https://github.com/x1aaff/mapx"
 
   def project do

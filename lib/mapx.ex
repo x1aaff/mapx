@@ -44,6 +44,26 @@ defmodule MapX do
   end
 
   @doc """
+  Gets `{key, value}` of first existing key in list, else `{:"$default", default}`
+  """
+  def get_find_key_value(map, keys, default \\ nil)
+
+  def get_find_key_value(_map, [], default) do
+    {:"$default", default}
+  end
+
+  def get_find_key_value(map, [key | rest], default) do
+    case map do
+      %{^key => value} -> {key, value}
+      %{} -> get_find_key_value(map, rest, default)
+    end
+  end
+
+  def get_find_key_value(map, key, default) do
+    get_find_key_value(map, [key], default)
+  end
+
+  @doc """
   Puts value under `key` where value is computed from current map
   """
   def put_with(map, key, fun) when is_function(fun, 1) do
